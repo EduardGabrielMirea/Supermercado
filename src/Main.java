@@ -64,6 +64,9 @@ public class Main {
         return opcion;
     }
 
+    /**
+     * Estos metodos deberían ir colocados en un controlador para las clases de detergente, cereal y vino.
+     */
     private static void crearDetergente(){
         System.out.println("Intoduce la marca, el precio, el volumen, el tipo de envase y el descuento. (Fairy 10 2 Botella 0.2)");
         Scanner sc = new Scanner(System.in);
