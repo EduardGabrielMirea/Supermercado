@@ -11,10 +11,10 @@ public class Cereal implements IAlimento {
     public Date fechaCaducidad;
 
 
-    public Cereal(String marca, float precio, String tipoCereal) {
+    public Cereal(String marca, float precio) {
         this.marca = marca;
         this.precio = precio;
-        this.tipoCereal = tipoCereal;
+
     }
 
     public String getMarca() {
@@ -69,11 +69,11 @@ public class Cereal implements IAlimento {
     @Override
     public String toString() {
         return "Cereales: " +
-                "marca=" + marca +
-                "\n- precio=" + precio +
-                "\n- tipoCereal='" + tipoCereal+
-                "\n- fechaCaducidad=" + fechaCaducidad +
-                "\n -calorias=" + getCalorias();
+                "marca= " + marca +
+                "\n- precio= " + precio +" $"+
+                "\n- tipoCereal= " + tipoCereal+
+                "\n- fechaCaducidad= " + fechaCaducidad +
+                "\n -calorias= " + getCalorias();
     }
 
 }

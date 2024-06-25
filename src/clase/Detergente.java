@@ -74,10 +74,10 @@ public class Detergente implements ILiquido, IDescuento {
     @Override
     public String toString() {
         return "Detergente: \n" +
-                "- marca=" + marca +
-                "\n- precio=" + precio  +
-                "\n- volumen=" + volumen +
-                "\n- tipoEnvase=" + tipoEnvase +
-                "\n- descuento=" + descuento;
+                "- marca= " + marca +
+                "\n- precio= " + precio  +
+                "\n- volumen= " + volumen +
+                "\n- tipoEnvase= " + tipoEnvase +
+                "\n- descuento= " + descuento +" %";
     }
 }

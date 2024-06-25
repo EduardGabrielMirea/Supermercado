@@ -26,6 +26,11 @@ public class Vino implements ILiquido, IAlimento, IDescuento {
         this.tipoEnvase = "";
     }
 
+    public Vino(String marca, float precio, double gradosAlcohol) {
+        this.precio = precio;
+        this.marca = marca;
+        this.gradosAlcohol = gradosAlcohol;
+    }
 
     public String getMarca() {
         return marca;
@@ -115,12 +120,11 @@ public class Vino implements ILiquido, IAlimento, IDescuento {
     @Override
     public String toString() {
         return "Vino " +
-                "marca=" + marca +
-                "\n- tipoVino= " + tipoVino +
-                "\n- gradosAlcohol=" + gradosAlcohol +
-                "\n- precio=" + precio +
-                "\n- descuento=" + descuento +
-                (volumen > 0 ? "\n- volumen=" + volumen : "") +
+                "marca= " + marca +
+                "\n- gradosAlcohol= " + gradosAlcohol +
+                "\n- precio= " + precio +
+                "\n- descuento= " + descuento + " %" +
+                (volumen > 0 ? "\n- volumen= " + volumen : "") +
                 (tipoEnvase.length() > 0 ? "\n- tipoEnvase='" + tipoEnvase + "'" : "");
     }
 }
