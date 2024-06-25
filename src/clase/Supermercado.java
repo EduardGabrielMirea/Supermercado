@@ -1,17 +1,17 @@
 package clase;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Supermercado {
     public String nombre;
-    public Set<Cereal> cereals;
-    public Set<Detergente> detergentes;
+    public List<Cereal> cereales;
+    public List<Detergente> detergentes;
 
-    public Supermercado(String nombre, Set<Cereal> cereals, Set<Detergente> detergentes) {
+    public Supermercado(String nombre) {
         this.nombre = nombre;
-        this.cereals = new HashSet<>();
-        this.detergentes = new HashSet<>();
+        this.cereales = new ArrayList<>();
+        this.detergentes = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -22,34 +22,32 @@ public class Supermercado {
         this.nombre = nombre;
     }
 
-    public Set<Cereal> getCereales() {
-        return cereals;
+    public void addCereal(Cereal cereal) {
+        this.cereales.add(cereal);
     }
 
-    public void setCereales(Set<Cereal> cereals) {
-        this.cereals = cereals;
+    public void removeCereal(Cereal cereal) {
+        this.cereales.remove(cereal);
     }
 
-    public Set<Detergente> getDetergentes() {
+    public List<Cereal> getCereales() {
+        return cereales;
+    }
+
+    public void addDetergente(Detergente detergente) {
+        this.detergentes.add(detergente);
+    }
+
+    public void removeDetergente(Detergente detergente) {
+        this.detergentes.remove(detergente);
+    }
+
+    public List<Detergente> getDetergentes() {
         return detergentes;
     }
 
-    public void setDetergentes(Set<Detergente> detergentes) {
-        this.detergentes = detergentes;
-    }
-
-    public void addCereal(Set<Cereal> cereal){
-        this.cereals.addAll(cereal);
-    }
-
-    public void addDetergente(Set<Detergente> detergente){
-        this.detergentes.addAll(detergente);
-    }
-
-
     @Override
-    public String toString(){
-        return "El supermercado: "+this.nombre;
+    public String toString() {
+        return "Supermercado: " + nombre + "\nCereales: " + cereales + "\nDetergentes: " + detergentes;
     }
-
 }

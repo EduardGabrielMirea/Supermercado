@@ -1,22 +1,20 @@
 package clase;
 
 import interfaces.IAlimento;
-import interfaces.IDescuento;
-import interfaces.ILiquido;
+
+import java.util.Date;
 
 public class Cereal implements IAlimento {
     public String marca;
-    public String nombre;
     public float precio;
     public String tipoCereal;
+    public Date fechaCaducidad;
     public Supermercado supermercado;
 
-    public Cereal(String marca, String nombre, float precio, String tipoCereal, Supermercado supermercado) {
+    public Cereal(String marca, float precio, String tipoCereal) {
         this.marca = marca;
-        this.nombre = nombre;
         this.precio = precio;
         this.tipoCereal = tipoCereal;
-        this.supermercado = supermercado;
     }
 
     public String getMarca() {
@@ -50,11 +48,38 @@ public class Cereal implements IAlimento {
     public void setSupermercado(Supermercado supermercado) {
         this.supermercado = supermercado;
     }
-
-
+    @Override
+    public void setCaducidad(Date fechaCaducidad) {
+        this.fechaCaducidad = fechaCaducidad;
+    }
 
     @Override
-    public String toString(){
-        return "La marca del cereal es: "+this.marca+", el tipo de cereal es: "+this.tipoCereal+", el precio del ceral es: "+this.precio;
+    public Date getCaducidad() {
+        return fechaCaducidad;
     }
+
+    @Override
+    public int getCalorias() {
+        switch (tipoCereal) {
+            case "espelta":
+                return 5;
+            case "maíz":
+                return 8;
+            case "trigo":
+                return 12;
+            default:
+                return 15;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Cereales: " +
+                "marca=" + marca +
+                "\n- precio=" + precio +
+                "\n- tipoCereal='" + tipoCereal+
+                "\n- fechaCaducidad=" + fechaCaducidad +
+                "\n -calorias=" + getCalorias();
+    }
+
 }

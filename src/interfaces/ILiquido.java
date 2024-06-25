@@ -2,8 +2,8 @@ package interfaces;
 
 public interface ILiquido {
 
-    void setVolumen();
+    void setVolumen(float volumen);
     float getVolumen();
-    void setTipoEnvase();
-    void getTipoEnvase();
+    void setTipoEnvase(String tipoEnvase);
+    String getTipoEnvase();
 }

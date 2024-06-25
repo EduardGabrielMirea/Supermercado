@@ -8,11 +8,14 @@ public class Detergente implements ILiquido, IDescuento {
     public String marca;
     public float precio;
     public Supermercado supermercado;
+    public  float volumen;
+    public String tipoEnvase;
+    public float descuento;
 
-    public Detergente(String marca, float precio,Supermercado supermercado) {
+
+    public Detergente(String marca, float precio) {
         this.marca = marca;
         this.precio = precio;
-        this.supermercado = supermercado;
     }
 
     public String getMarca() {
@@ -40,7 +43,49 @@ public class Detergente implements ILiquido, IDescuento {
     }
 
     @Override
-    public String toString(){
-        return  "La marca del producto: "+this.marca+", el precio del producto: " +this.precio;
+    public void setVolumen(float volumen) {
+        this.volumen = volumen;
+
+    }
+
+    @Override
+    public float getVolumen() {
+        return 0;
+    }
+
+    @Override
+    public void setTipoEnvase(String tipoEnvase) {
+        this.tipoEnvase = tipoEnvase;
+    }
+
+    @Override
+    public String getTipoEnvase() {
+     return tipoEnvase;
+    }
+
+    @Override
+    public void setDescuento(float descuento) {
+        this.descuento = descuento;
+    }
+
+    @Override
+    public float getDescuento() {
+        return 0;
+    }
+
+    @Override
+    public float getPrecioDescuento() {
+        return precio * (1 - descuento);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Detergente: \n" +
+                "- marca=" + marca +
+                "\n- precio=" + precio  +
+                "\n- volumen=" + volumen +
+                "\n- tipoEnvase=" + tipoEnvase +
+                "\n- descuento=" + descuento;
     }
 }
