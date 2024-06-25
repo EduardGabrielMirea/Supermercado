@@ -1,6 +1,5 @@
 import clase.Cereal;
 import clase.Detergente;
-import clase.Supermercado;
 import clase.Vino;
 import interfaces.IAlimento;
 

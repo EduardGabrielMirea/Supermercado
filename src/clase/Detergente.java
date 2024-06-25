@@ -7,7 +7,6 @@ public class Detergente implements ILiquido, IDescuento {
 
     public String marca;
     public float precio;
-    public Supermercado supermercado;
     public  float volumen;
     public String tipoEnvase;
     public float descuento;
@@ -34,13 +33,6 @@ public class Detergente implements ILiquido, IDescuento {
         this.precio = precio;
     }
 
-    public Supermercado getSupermercado() {
-        return supermercado;
-    }
-
-    public void setSupermercado(Supermercado supermercado) {
-        this.supermercado = supermercado;
-    }
 
     @Override
     public void setVolumen(float volumen) {

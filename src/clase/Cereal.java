@@ -9,7 +9,7 @@ public class Cereal implements IAlimento {
     public float precio;
     public String tipoCereal;
     public Date fechaCaducidad;
-    public Supermercado supermercado;
+
 
     public Cereal(String marca, float precio, String tipoCereal) {
         this.marca = marca;
@@ -41,13 +41,7 @@ public class Cereal implements IAlimento {
         this.tipoCereal = tipoCereal;
     }
 
-    public Supermercado getSupermercado() {
-        return supermercado;
-    }
 
-    public void setSupermercado(Supermercado supermercado) {
-        this.supermercado = supermercado;
-    }
     @Override
     public void setCaducidad(Date fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
