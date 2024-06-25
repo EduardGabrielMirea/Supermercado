@@ -1,7 +1,7 @@
-package clase;
+package entity;
 
-import interfaces.IDescuento;
-import interfaces.ILiquido;
+import repository.IDescuento;
+import repository.ILiquido;
 
 public class Detergente implements ILiquido, IDescuento {
 

@@ -1,7 +1,7 @@
-import clase.Cereal;
-import clase.Detergente;
-import clase.Vino;
-import interfaces.IAlimento;
+import entity.Cereal;
+import entity.Detergente;
+import entity.Vino;
+import repository.IAlimento;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

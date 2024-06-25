@@ -1,6 +1,6 @@
-package clase;
+package entity;
 
-import interfaces.IAlimento;
+import repository.IAlimento;
 
 import java.util.Date;
 

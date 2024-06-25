@@ -1,8 +1,8 @@
-package clase; // Assuming this is the package name
+package entity; // Assuming this is the package name
 
-import interfaces.IAlimento;
-import interfaces.IDescuento;
-import interfaces.ILiquido;
+import repository.IAlimento;
+import repository.IDescuento;
+import repository.ILiquido;
 
 import java.util.Date;
 
